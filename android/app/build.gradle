@@ -91,6 +91,7 @@ android {
         applicationId "com.ecommerce"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        manifestPlaceholders = [auth0Domain: 'dev-kd5v8tlytpw1nbtg.us.auth0.com', auth0Scheme: "${applicationId}.auth0"]
         versionCode 1
         versionName "1.0"
     }
