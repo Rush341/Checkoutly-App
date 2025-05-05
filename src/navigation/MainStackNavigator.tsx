@@ -12,6 +12,7 @@ import { FilterViewModelProvider } from "../viewmodels/FilterViewModel";
 import { Filter } from "../models/FilterViewProps";
 import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 import { Product } from "../models/ProductListViewProps";
+import SplashViewModelProvider from "../viewmodels/SplashViewModel";
 
 export type RootStackParamList = {
   Splash: undefined;
@@ -40,7 +41,9 @@ const MainStackNavigator = () => {
       {/* Splash, Welcome, and Auth screens */}
       <Stack.Screen name="Splash">
         {() => (
+          <SplashViewModelProvider>
             <SplashScreen />
+          </SplashViewModelProvider>
         )}
       </Stack.Screen>
 
@@ -104,7 +107,7 @@ const MainStackNavigator = () => {
         }}
       >
         {() => (
-            <ProductDetailsScreen />
+          <ProductDetailsScreen />
         )}
       </Stack.Screen>
     </Stack.Navigator>
