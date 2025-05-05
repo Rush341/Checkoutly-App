@@ -5,7 +5,7 @@ import { OnboardingViewModelProps } from "../models/OnboardingViewProps.js";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../navigation/MainStackNavigator";
 import { useAuth0 } from "react-native-auth0";
-import { logger } from "../utils/logger.js";
+import { logger } from "../utils/logger";
 
 const OnboardingViewModelContext = createContext<OnboardingViewModelProps | undefined>(
     undefined
